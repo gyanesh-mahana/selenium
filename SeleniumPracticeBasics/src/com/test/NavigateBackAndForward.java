@@ -11,8 +11,7 @@ public class NavigateBackAndForward {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver",
-				"/home/gyanesh/Downloads/JavaLibrary/chromedriver_linux64/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();

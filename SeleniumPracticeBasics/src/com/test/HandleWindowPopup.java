@@ -15,8 +15,7 @@ public class HandleWindowPopup {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver",
-				"/home/gyanesh/Downloads/JavaLibrary/chromedriver_linux64/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
@@ -27,18 +26,20 @@ public class HandleWindowPopup {
 
 		driver.get("https://www.seleniumeasy.com/test/window-popup-modal-demo.html");
 
-		WebElement twitter = driver.findElement(By.xpath("//div[@class='panel-body']//a[contains(text(), 'Follow On Twitter')]"));
-		WebElement facebook = driver.findElement(By.xpath("//div[@class='panel-body']//a[contains(text(), 'Like us On Facebook')]"));
-		
+		WebElement twitter = driver
+				.findElement(By.xpath("//div[@class='panel-body']//a[contains(text(), 'Follow On Twitter')]"));
+		WebElement facebook = driver
+				.findElement(By.xpath("//div[@class='panel-body']//a[contains(text(), 'Like us On Facebook')]"));
+
 		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(twitter));
-		
+
 		twitter.click();
-		
+
 		Thread.sleep(2000);
 		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(facebook));
-		
+
 		facebook.click();
-		
+
 		Set<String> handles = driver.getWindowHandles();
 ////		Using Loop
 //		for(String handle:handles) {
@@ -56,13 +57,13 @@ public class HandleWindowPopup {
 		while (iter.hasNext()) {
 			String childHandle = iter.next();
 			driver.switchTo().window(childHandle);
-			
+
 			new WebDriverWait(driver, 10).until(ExpectedConditions.titleContains("Selenium Easy"));
-			
+
 			System.out.println(driver.getTitle());
 			driver.close();
 		}
-		
+
 		driver.switchTo().window(parentHandle);
 		System.out.println(driver.getTitle());
 		driver.close();

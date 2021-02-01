@@ -13,8 +13,7 @@ public class CustomXpath {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver",
-				"/home/gyanesh/Downloads/JavaLibrary/chromedriver_linux64/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();

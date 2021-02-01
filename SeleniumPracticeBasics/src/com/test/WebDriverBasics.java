@@ -24,13 +24,11 @@ public class WebDriverBasics {
 		 * and initialize new driver
 		 */
 		if (this.browser == "chrome") {
-			System.setProperty("webdriver.chrome.driver",
-					"/home/gyanesh/Downloads/JavaLibrary/chromedriver_linux64/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
 			this.driver = new ChromeDriver();
 		} else if (this.browser == "firefox") {
 
-			System.setProperty("webdriver.gecko.driver",
-					"/home/gyanesh/Downloads/JavaLibrary/geckodriver-v0.28.0-linux32/geckodriver");
+			System.setProperty("webdriver.gecko.driver", "resources/geckodriver");
 			this.driver = new FirefoxDriver();
 		} else {
 			System.out.println("No driver for browser: " + browser);

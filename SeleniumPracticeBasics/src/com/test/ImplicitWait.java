@@ -12,7 +12,7 @@ public class ImplicitWait {
 		// TODO Auto-generated method stub
 
 		System.setProperty("webdriver.chrome.driver",
-				"/home/gyanesh/Downloads/JavaLibrary/chromedriver_linux64/chromedriver");
+				"resources/chromedriver");
 
 		WebDriver driver = new ChromeDriver();
 		try {

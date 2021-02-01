@@ -16,8 +16,7 @@ public class ExplicitWait {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver",
-				"/home/gyanesh/Downloads/JavaLibrary/chromedriver_linux64/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
@@ -33,9 +32,9 @@ public class ExplicitWait {
 //		featureWait.until(ExpectedConditions.elementToBeClickable(ele));
 		featureWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@data-nav-item-id='features']/a")));
 //		new WebDriverWait(driver, 10).ignoring(StaleElementReferenceException.class).until(ExpectedConditions.elementToBeClickable(ele));
-		
+
 		ele.click();
-		
+
 		driver.quit();
 	}
 

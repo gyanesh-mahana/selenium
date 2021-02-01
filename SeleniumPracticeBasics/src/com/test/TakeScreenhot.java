@@ -15,8 +15,7 @@ public class TakeScreenhot {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver",
-				"/home/gyanesh/Downloads/JavaLibrary/chromedriver_linux64/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
@@ -34,7 +33,7 @@ public class TakeScreenhot {
 		 */
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(src,
-				new File("/home/gyanesh/eclipse-workspace_testing/SeleniumTest/Screenshots/wiki_event.png"));
+				new File("Screenshots/wiki_event.png"));
 
 		driver.findElement(By.xpath("//a[text()='Download as PDF']")).click();
 		driver.findElement(By.xpath("//button[@type='submit']")).click();

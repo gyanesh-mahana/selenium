@@ -37,12 +37,10 @@ public class FreshTest {
 		WebDriver driver = null;
 
 		if (browser.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					"/home/gyanesh/Downloads/JavaLibrary/chromedriver_linux64/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
 			driver = new ChromeDriver();
 		} else if (browser.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver",
-					"/home/gyanesh/Downloads/JavaLibrary/geckodriver-v0.28.0-linux32/geckodriver");
+			System.setProperty("webdriver.gecko.driver", "resources/geckodriver");
 			driver = new FirefoxDriver();
 		} else {
 			System.out.println("No Browser driver available for: " + browser);
@@ -55,7 +53,7 @@ public class FreshTest {
 		Properties prop = new Properties();
 		FileInputStream configStream = null;
 		try {
-			configStream = new FileInputStream("/home/gyanesh/git/selenium/SeleniumPracticeBasics/config.properties");
+			configStream = new FileInputStream("config.properties");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

@@ -13,8 +13,7 @@ public class HeadlessBrowserTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver",
-				"/home/gyanesh/Downloads/JavaLibrary/chromedriver_linux64/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
 
 		// HtmlUnitDriver not supported in v3.x
 		// so need to download the jar as external library

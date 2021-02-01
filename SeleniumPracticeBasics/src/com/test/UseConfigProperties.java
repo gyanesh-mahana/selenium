@@ -10,7 +10,7 @@ public class UseConfigProperties {
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		// TODO Auto-generated method stub
 		Properties p = new  Properties();
-		FileInputStream fStream = new FileInputStream("/home/gyanesh/eclipse-workspace_testing/SeleniumTest/config.properties");
+		FileInputStream fStream = new FileInputStream("config.properties");
 		
 		p.load(fStream);
 		System.out.println(p.getProperty("browser", "chrome"));
