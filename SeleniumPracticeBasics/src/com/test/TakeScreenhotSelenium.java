@@ -11,7 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TakeScreenhot {
+public class TakeScreenhotSelenium {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
@@ -32,8 +32,7 @@ public class TakeScreenhot {
 		 * Screenshot
 		 */
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src,
-				new File("Screenshots/wiki_event.png"));
+		FileUtils.copyFile(src, new File("Screenshots/wiki_event.png"));
 
 		driver.findElement(By.xpath("//a[text()='Download as PDF']")).click();
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
